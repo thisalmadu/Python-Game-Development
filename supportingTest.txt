@@ -112,3 +112,22 @@ That is the entire program. After line 2.3 is done, the infinite while loop star
 make a black window appear on the screen, constantly check for a QUIT event, and then redraws the unchanged black window to the screen over
 and over again. Let’s learn how to make interesting things appear on this window instead of just blackness by learning about pixels, Surface objects,
 Color objects, Rect objects, and the Pygame drawing functions.
+
+================================================================================
+3) Pixel Cordinates
+================================================================================
+The window that the “Hello World” program creates is just composed of little square dots on your screen called pixels.
+Each pixel starts off as black but can be set to a different color. Imagine that instead of a Surface object that is 400 pixels wide and
+300 pixels tall, we just had a Surface object that was 8 pixels by 8 pixels.
+
+We can refer to a specific pixel by using a Cartesian Coordinate system. Each column of the X-axis and each row of the Y-axis will
+have an “address” that is an integer from 0 to 7 so that we can locate any pixel by specifying the X and Y axis integers.
+
+For example, in the above 8x8 image, we can see that the pixels at the XY coordinates (4, 0), (2, 2), (0, 5), and (5, 6) have been painted
+black, the pixel at (2, 4) has been painted gray, while all the other pixels are painted white. XY coordinates are also called points.
+If you’ve taken a math class and learned about Cartesian Coordinates, you might notice that the Y-axis starts at 0 at the top and then
+increases going down, rather than increasing as it goes up. This is just how Cartesian Coordinates work in Pygame
+(and almost every programming language).
+
+The Pygame framework often represents Cartesian Coordinates as a tuple of two integers, such as (4, 0) or (2, 2).
+The first integer is the X coordinate and the second is the Y coordinate.
