@@ -131,3 +131,112 @@ increases going down, rather than increasing as it goes up. This is just how Car
 
 The Pygame framework often represents Cartesian Coordinates as a tuple of two integers, such as (4, 0) or (2, 2).
 The first integer is the X coordinate and the second is the Y coordinate.
+
+================================================================================
+4) Functions and Methods
+================================================================================
+The difference between the function and the method is that a method is always attached to an object. If we have a object named "dcckie"
+and we have a method attched to that object called "foo()". we can call the method as
+>> duckie.foo()
+Observe that "sys.exit()" is a call of a function inside a module named "sys". in the begining we import the module as "import sys".
+Constructor usually starts with uppercase. E.g. "pygame.Rect()"or "pygame.Surface()"
+
+Example of a function call, a method call and a function inside a module
+----------------------------------
+import whammy  #import the module "whammy"
+fizzy()  #a function calls
+egg = Wombat() # "Wombat()" function returns an object, "egg"
+egg.bluhbluh() # method call
+whammy.spam() # a function call
+----------------------------------
+
+- the surface object is returned by "pygame.display.set_mode()"
+- anything that is drawn on the display surface object will be displayed on the window when "pygame.display.update()" function is called.
+
+================================================================================
+5) Colors
+================================================================================
+Color       |  RGB value
+--------------------
+Aqua          (0,255,255)
+black          (0,0,0)
+Blue            (0,0,255)
+Fuchsia       (255,0,255)
+gray          (128,128,128)
+Green         (0,128,0)
+Lime          (0,255,0)
+Maroon        (128,0,0)
+Navy Blue     (0,0,128)
+Olive         (128,128,0)
+Purple        (128,0,128)
+Red           (255,0,0)
+Silver        (192,192,192)
+Teal          (0,128,128)
+white         (255,255,255)
+Yellow        (255,255,0)
+--------------------------------
+3,1) Pygame Color objects
+----------------------------------
+>>> import pygame
+>>> pygame.Color(255, 0, 0)
+(255, 0, 0, 255)
+>>> myColor = pygame.Color(255, 0, 0, 128)
+>>> myColor == (255, 0, 0, 128)
+True
+
+================================================================================
+6) Rect objects
+================================================================================
+Rect objects for short. For example, the code below creates a Rect object with a
+top left corner at (10, 20) that is 200 pixels wide and 300 pixels tall:
+>>> import pygame
+>>> spamRect = pygame.Rect(10, 20, 200, 300)
+>>> spamRect == (10, 20, 200, 300)
+True
+
+Later can access the attributes of the object as
+>>> spamRect.right
+210
+
+If you reassign the right attribute, all the other attributes are
+automatically recalculated:
+>>> spamRect.right = 350
+>>> spamRect.left
+150
+-------------------------------------------------------------------------
+Attribute Name | Description
+-------------------------------------------------------------------------
+myRect.left    | The int value of the X-coordinate of the left side of the rectangle.
+
+myRect.right   | The int value of the X-coordinate of the right side of the rectangle.
+
+myRect.top     | The int value of the Y-coordinate of the top side of the rectangle.
+
+myRect.bottom  | The int value of the Y-coordinate of the bottom side.
+
+myRect.centerx | The int value of the X-coordinate of the center of the rectangle.
+
+myRect.centery | The int value of the Y-coordinate of the center of the rectangle.
+
+myRect.width   | The int value of the width of the rectangle.
+
+myRect.height  | The int value of the height of the rectangle.
+
+myRect.size    | A tuple of two ints: (width, height)
+
+myRect.topleft | A tuple of two ints: (left, top)
+
+myRect.topright| A tuple of two ints: (right, top)
+
+myRect.bottomleft| A tuple of two ints: (left, bottom)
+
+myRect.bottomright| A tuple of two ints: (right, bottom)
+
+myRect.midleft    | A tuple of two ints: (left, centery)
+
+myRect.midright   | A tuple of two ints: (right, centery)
+
+myRect.midtop     | A tuple of two ints: (centerx, top)
+
+myRect.midbottom  | A tuple of two ints: (centerx, bottom)
+----------------------------------------------------------------------
