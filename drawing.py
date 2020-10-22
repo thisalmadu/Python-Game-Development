@@ -4,8 +4,8 @@ from pygame.locals import *
 pygame.init()
 
  # set up the window
- DISPLAYSURF = pygame.display.set_mode((500, 400), 0, 32)
- pygame.display.set_caption('Drawing')
+DISPLAYSURF = pygame.display.set_mode((500, 400), 0, 32)
+pygame.display.set_caption('Drawing')
 
  # set up the colors
 BLACK = ( 0,  0,  0)
